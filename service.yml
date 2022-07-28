@@ -6,9 +6,12 @@ metadata:
     app: devtech
 spec:
   ports:
-    - port: 8080        # Container port exposed
-      targetPort: 80    # Pods port
+    - protocol: TCP
+      port: 8080       # Container port exposed
+      targetPort: 8080    # Pods port
       nodePort: 31200
   selector:
     app: devtech        # apply service to pod with specific label
   type: LoadBalancer    # ClusterIP or NodePort
+  externalIPs:
+    - 192.168.100.55
