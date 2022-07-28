@@ -17,5 +17,5 @@ spec:
           image:  malkiats/webapp
           imagePullPolicy: Always
           ports:
-          - containerPort: 8080
+          - containerPort: 80
 

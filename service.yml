@@ -8,7 +8,7 @@ spec:
   ports:
     - protocol: TCP
       port: 8080       # Container port exposed
-      targetPort: 8080    # Pods port
+      targetPort: 80    # Pods port
       nodePort: 31200
   selector:
     app: devtech        # apply service to pod with specific label
