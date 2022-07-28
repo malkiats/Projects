@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devtech
+spec:
+  replicas: 2
+  selector:
+  matchLabels:
+    app: devtech
+  template:
+    metadata:
+      labels:
+        app: devtech
+    spec:
+      containers:
+        - name:  devtech
+          image:  malkiats/webapp
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+

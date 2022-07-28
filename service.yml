@@ -1,0 +1,14 @@
+apiVersion: v1      
+kind: Service
+metadata:
+  name: devtech
+  labels:
+    app: devtech
+spec:
+  ports:
+    - port: 8080        # Container port exposed
+      targetPort: 80    # Pods port
+      nodePort: 31200
+  selector:
+    app: devtech        # apply service to pod with specific label
+  type: LoadBalancer    # ClusterIP or NodePort
